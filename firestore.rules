@@ -1,0 +1,21 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /wishes/{wishId} {
+      // Anyone can create a new wish (from the customizer).
+      allow create: if true;
+
+      // Anyone with the exact link (document id) can read that one wish.
+      allow get: if true;
+
+      // Allow editing an existing wish (so "Get My Link" can update your
+      // own wish in place instead of generating a new link each time).
+      allow update: if true;
+
+      // Nobody can browse/list all wishes, and nobody can delete one.
+      allow list: if false;
+      allow delete: if false;
+    }
+  }
+}

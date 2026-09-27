@@ -1,0 +1,3330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f5">
+
+<title>Happy Birthday My Love ❤️</title>
+
+<style>
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+        "Segoe UI",
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    background:#fff5f8;
+    color:#54263b;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+
+    min-height:100vh;
+}
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root{
+    --pink:#f56b9b;
+    --dark-pink:#d94778;
+    --light-pink:#ffe1eb;
+    --cream:#fffaf7;
+    --red:#e94768;
+    --gold:#e7a93b;
+    --text:#54263b;
+}
+
+/* =========================================================
+   APP
+========================================================= */
+
+#app{
+    width:100%;
+    min-height:100vh;
+    position:relative;
+}
+
+/* =========================================================
+   SCREENS
+========================================================= */
+
+.screen{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    min-height:100vh;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:30px 20px;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+.screen.active{
+    display:flex;
+    animation:screenIn .8s ease;
+}
+
+.screen.active{
+    display:flex;
+    animation:screenIn .8s ease;
+}
+
+@keyframes screenIn{
+    from{
+        opacity:0;
+        transform:scale(1.03);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.bg{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:0;
+}
+
+.blob{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(2px);
+    opacity:.65;
+}
+
+.blob.one{
+    width:320px;
+    height:320px;
+    background:#ffd8e5;
+    top:-120px;
+    left:-100px;
+}
+
+.blob.two{
+    width:300px;
+    height:300px;
+    background:#ffeacb;
+    right:-100px;
+    top:20%;
+}
+
+.blob.three{
+    width:350px;
+    height:350px;
+    background:#fbd9e8;
+    bottom:-180px;
+    left:25%;
+}
+
+/* =========================================================
+   FLOATING FLOWERS
+========================================================= */
+
+.flower{
+    position:absolute;
+    font-size:25px;
+    opacity:.6;
+    animation:floatFlower linear infinite;
+}
+
+@keyframes floatFlower{
+    0%{
+        transform:translateY(110vh) rotate(0deg);
+    }
+
+    100%{
+        transform:translateY(-15vh) rotate(360deg);
+    }
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content{
+    width:100%;
+    max-width:950px;
+    position:relative;
+    z-index:10;
+    text-align:center;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+.script{
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size:clamp(30px,7vw,65px);
+    color:var(--pink);
+}
+
+.title{
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:clamp(38px,9vw,82px);
+
+    color:#69304a;
+
+    line-height:1.05;
+
+    margin:10px 0 20px;
+}
+
+.subtitle{
+    font-size:17px;
+    line-height:1.8;
+    color:#87586c;
+    max-width:650px;
+    margin:0 auto 25px;
+}
+
+.small{
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:12px;
+    color:#b66b83;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn{
+    border:0;
+
+    padding:15px 28px;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f56b9b,
+            #dc4f7d
+        );
+
+    color:white;
+
+    font-size:15px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 12px 30px rgba(217,71,120,.25);
+
+    transition:.3s;
+
+    margin:8px;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:
+        0 18px 35px rgba(217,71,120,.35);
+}
+
+.btn:active{
+    transform:scale(.95);
+}
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+.envelope-wrap{
+    margin:35px auto;
+    width:310px;
+    max-width:90vw;
+    height:210px;
+    position:relative;
+    cursor:pointer;
+    perspective:1000px;
+}
+
+.envelope{
+    position:absolute;
+    inset:0;
+}
+
+.envelope-body{
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f58aaa,
+            #e65a87
+        );
+
+    border-radius:10px;
+
+    box-shadow:
+        0 25px 50px rgba(160,50,90,.25);
+}
+
+.envelope-body:before,
+.envelope-body:after{
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+
+    width:0;
+    height:0;
+
+    border-style:solid;
+}
+
+.envelope-body:before{
+    left:0;
+
+    border-width:
+        0 155px 110px 155px;
+
+    border-color:
+        transparent
+        transparent
+        #ed7197
+        transparent;
+}
+
+.envelope-body:after{
+    right:0;
+
+    border-width:
+        110px 155px 0 155px;
+
+    border-color:
+        #d94d7d
+        transparent
+        transparent
+        transparent;
+}
+
+.flap{
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:0;
+    height:0;
+
+    border-left:155px solid transparent;
+    border-right:155px solid transparent;
+    border-top:115px solid #ffb2c9;
+
+    transform-origin:top;
+
+    transition:1s;
+
+    z-index:5;
+}
+
+.envelope.open .flap{
+    transform:rotateX(180deg);
+}
+
+.seal{
+    position:absolute;
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:30px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:8;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.15);
+
+    transition:.5s;
+}
+
+.envelope.open .seal{
+    opacity:0;
+}
+
+/* =========================================================
+   CAKE
+========================================================= */
+
+/* =========================================================
+   PREMIUM BIRTHDAY CAKE
+========================================================= */
+
+.cake-area{
+    position:relative;
+    width:360px;
+    height:360px;
+    margin:15px auto 5px;
+}
+
+/* Cake shadow */
+.cake-area::after{
+    content:"";
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:290px;
+    height:35px;
+    background:rgba(220,70,120,.18);
+    border-radius:50%;
+    filter:blur(12px);
+}
+
+/* Bottom cake layer */
+.cake{
+    position:absolute;
+    width:280px;
+    height:105px;
+    left:50%;
+    bottom:55px;
+    transform:translateX(-50%);
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ff91b6 0%,
+            #f76f9e 48%,
+            #e54c7c 49%,
+            #d83f70 100%
+        );
+
+    border-radius:
+        18px
+        18px
+        35px
+        35px;
+
+    box-shadow:
+        0 20px 35px rgba(205,60,110,.25);
+}
+
+/* Top icing */
+.cake-top{
+    position:absolute;
+    width:280px;
+    height:65px;
+    left:0;
+    top:-32px;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            #fff8fb 0%,
+            #ffe2ed 55%,
+            #ffc9dc 100%
+        );
+
+    border-radius:50%;
+
+    box-shadow:
+        0 5px 10px rgba(200,60,110,.12);
+}
+
+/* Icing dripping effect */
+.cake-top::before{
+    content:"";
+
+    position:absolute;
+
+    left:25px;
+    top:28px;
+
+    width:35px;
+    height:42px;
+
+    background:#ffe0ec;
+
+    border-radius:
+        0 0 20px 20px;
+}
+
+.cake-top::after{
+    content:"";
+
+    position:absolute;
+
+    right:35px;
+    top:25px;
+
+    width:28px;
+    height:38px;
+
+    background:#ffe0ec;
+
+    border-radius:
+        0 0 18px 18px;
+}
+
+/* Second cake layer */
+.cake-layer{
+    position:absolute;
+
+    left:50%;
+    transform:translateX(-50%);
+
+    bottom:-30px;
+
+    width:255px;
+    height:60px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #e94f82,
+            #c93668
+        );
+
+    border-radius:
+        0
+        0
+        30px
+        30px;
+
+    z-index:-1;
+}
+
+/* Cake decorative cream line */
+.cake-layer::before{
+    content:"";
+
+    position:absolute;
+
+    left:15px;
+    right:15px;
+    top:12px;
+
+    height:12px;
+
+    background:#ffb5cc;
+
+    border-radius:50%;
+}
+
+/* Candles */
+.candle{
+    position:absolute;
+
+    width:22px;
+    height:75px;
+
+    left:50%;
+    top:-105px;
+
+    transform:translateX(-50%);
+
+    border-radius:8px;
+
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            #ffffff 0px,
+            #ffffff 10px,
+            #f45f91 10px,
+            #f45f91 20px
+        );
+
+    box-shadow:
+        0 5px 10px rgba(150,40,80,.15);
+
+    z-index:10;
+}
+
+/* Candle glow */
+.candle::after{
+    content:"";
+
+    position:absolute;
+
+    width:55px;
+    height:55px;
+
+    left:50%;
+    top:-38px;
+
+    transform:translateX(-50%);
+
+    background:rgba(255,190,40,.18);
+
+    border-radius:50%;
+
+    filter:blur(10px);
+
+    animation:
+        glow 1s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        opacity:.4;
+        transform:translateX(-50%) scale(.8);
+    }
+
+    to{
+        opacity:.9;
+        transform:translateX(-50%) scale(1.2);
+    }
+}
+
+/* Flame */
+.flame{
+    position:absolute;
+
+    width:28px;
+    height:40px;
+
+    left:50%;
+    top:-35px;
+
+    transform:
+        translateX(-50%)
+        rotate(-45deg);
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff700,
+            #ffb300 45%,
+            #ff5b00
+        );
+
+    border-radius:
+        50%
+        50%
+        50%
+        0;
+
+    filter:
+        drop-shadow(
+            0 0 8px #ffae00
+        );
+
+    animation:
+        flameMove .5s infinite alternate;
+}
+
+@keyframes flameMove{
+
+    from{
+        transform:
+            translateX(-50%)
+            rotate(-45deg)
+            scale(.9);
+    }
+
+    to{
+        transform:
+            translateX(-50%)
+            rotate(-45deg)
+            scale(1.1);
+    }
+}
+
+/* Cake text */
+.cake-text{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:210px;
+
+    text-align:center;
+
+    color:white;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    line-height:1.3;
+
+    text-shadow:
+        0 2px 5px rgba(120,20,60,.25);
+
+    z-index:5;
+}
+
+/* Cake decorations */
+.cake::after{
+    content:
+        "♥  ✦  ♥  ✦  ♥";
+
+    position:absolute;
+
+    left:50%;
+    bottom:15px;
+
+    transform:translateX(-50%);
+
+    width:90%;
+
+    text-align:center;
+
+    color:#ffc3d6;
+
+    font-size:18px;
+
+    letter-spacing:8px;
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+    .cake-area{
+        transform:scale(.82);
+        margin-top:-5px;
+        margin-bottom:-20px;
+    }
+
+}
+
+/* =========================================================
+   LETTER CARD
+========================================================= */
+
+.letter-card{
+    background:
+        rgba(255,255,255,.82);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    max-width:700px;
+
+    margin:20px auto;
+
+    box-shadow:
+        0 20px 60px rgba(150,70,100,.12);
+
+    border:
+        1px solid #f8d5e0;
+}
+
+.letter-card p{
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#663c4e;
+}
+
+/* =========================================================
+   PHOTO GALLERY
+========================================================= */
+
+.gallery{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:15px;
+
+    margin:30px auto;
+
+    max-width:850px;
+}
+
+.photo{
+    height:230px;
+
+    background:#fff;
+
+    padding:8px;
+
+    border-radius:5px;
+
+    box-shadow:
+        0 10px 25px rgba(100,40,70,.12);
+
+    transition:.4s;
+}
+
+.photo:nth-child(even){
+    transform:rotate(2deg);
+}
+
+.photo:nth-child(odd){
+    transform:rotate(-2deg);
+}
+
+.photo:hover{
+    transform:
+        rotate(0)
+        translateY(-8px)
+        scale(1.03);
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:2px;
+}
+
+@media(max-width:750px){
+
+    .gallery{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .photo{
+        height:190px;
+    }
+}
+
+/* =========================================================
+   MEMORY TEXT
+========================================================= */
+
+.memory{
+    background:white;
+
+    max-width:650px;
+
+    padding:30px;
+
+    margin:25px auto;
+
+    border-radius:25px;
+
+    box-shadow:
+        0 20px 60px rgba(120,40,70,.1);
+}
+
+.memory-icon{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+/* =========================================================
+   SCRATCH CARDS
+========================================================= */
+
+.scratch-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:20px;
+
+    max-width:850px;
+
+    margin:35px auto;
+}
+
+.scratch-card{
+    position:relative;
+
+    height:210px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    box-shadow:
+        0 15px 35px rgba(100,40,70,.12);
+}
+
+.scratch-content{
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    flex-direction:column;
+
+    padding:20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff,
+            #fff3f7
+        );
+}
+
+.scratch-content .emoji{
+    font-size:45px;
+}
+
+.scratch-content h3{
+    color:#d74b78;
+    margin:8px;
+}
+
+.scratch-content p{
+    color:#7d5264;
+    font-size:14px;
+}
+
+canvas{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    cursor:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Ctext y='25' font-size='25'%3E✨%3C/text%3E%3C/svg%3E"),
+    auto;
+}
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final{
+    position:relative;
+}
+
+.big-heart{
+    font-size:100px;
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.18);
+    }
+}
+
+.final-message{
+    max-width:700px;
+
+    margin:20px auto;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:
+        0 20px 60px rgba(120,40,70,.12);
+}
+
+.final-message p{
+    font-family:Georgia,serif;
+
+    font-size:18px;
+
+    line-height:2;
+}
+
+/* =========================================================
+   FIREWORKS
+========================================================= */
+
+.firework{
+    position:fixed;
+
+    width:5px;
+    height:5px;
+
+    border-radius:50%;
+
+    background:#ff5b91;
+
+    z-index:100;
+
+    pointer-events:none;
+
+    animation:
+        firework 1.5s ease-out forwards;
+}
+
+@keyframes firework{
+
+    0%{
+        opacity:1;
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    100%{
+        opacity:0;
+        transform:
+            translate(
+                var(--x),
+                var(--y)
+            )
+            scale(.2);
+    }
+}
+
+/* =========================================================
+   MUSIC
+========================================================= */
+
+.music{
+    position:fixed;
+
+    right:18px;
+    top:18px;
+
+    width:50px;
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#d84e7c;
+
+    font-size:20px;
+
+    box-shadow:
+        0 8px 25px rgba(100,40,70,.15);
+
+    cursor:pointer;
+
+    z-index:200;
+}
+
+/* =========================================================
+   NEXT INDICATOR
+========================================================= */
+
+.tap{
+    margin-top:20px;
+
+    font-size:12px;
+
+    color:#ae7287;
+
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        opacity:.4;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:600px){
+
+    .screen{
+        padding:20px 15px;
+    }
+
+    .letter-card{
+        padding:25px 20px;
+    }
+
+    .letter-card p,
+    .final-message p{
+        font-size:16px;
+    }
+
+    .scratch-grid{
+        grid-template-columns:1fr;
+        max-width:300px;
+    }
+
+    .scratch-card{
+        height:190px;
+    }
+
+    .envelope-wrap{
+        transform:scale(.9);
+    }
+
+    .cake-area{
+        transform:scale(.9);
+    }
+
+    .music{
+        width:45px;
+        height:45px;
+    }
+}
+
+/* =========================================================
+   CUSTOMIZER / EDIT MODE
+========================================================= */
+
+.customizer-toggle{
+    position:fixed;
+    left:18px;
+    top:18px;
+    z-index:1000;
+    border:0;
+    border-radius:50px;
+    padding:12px 18px;
+    background:#54263b;
+    color:#fff;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(80,30,55,.22);
+    transition:.25s;
+}
+.customizer-toggle:hover{transform:translateY(-2px);}
+
+.customizer{
+    position:fixed;
+    left:18px;
+    top:70px;
+    width:min(360px,calc(100vw - 36px));
+    max-height:calc(100vh - 90px);
+    overflow:auto;
+    z-index:999;
+    display:none;
+    background:rgba(255,250,252,.98);
+    border:1px solid #f3ccd9;
+    border-radius:22px;
+    padding:20px;
+    box-shadow:0 20px 60px rgba(80,30,55,.22);
+    text-align:left;
+}
+.customizer.open{display:block;animation:editorIn .25s ease;}
+@keyframes editorIn{
+    from{opacity:0;transform:translateY(-10px)}
+    to{opacity:1;transform:translateY(0)}
+}
+.customizer h2{
+    color:#69304a;
+    margin-bottom:6px;
+}
+.customizer .help{
+    color:#87586c;
+    font-size:13px;
+    line-height:1.5;
+    margin-bottom:15px;
+}
+.editor-section{
+    border-top:1px solid #f1d6df;
+    padding-top:15px;
+    margin-top:15px;
+}
+.editor-section h3{
+    color:#d94778;
+    font-size:15px;
+    margin-bottom:10px;
+}
+.editor-label{
+    display:block;
+    font-size:12px;
+    font-weight:700;
+    color:#75465b;
+    margin:9px 0 5px;
+}
+.editor-input,.editor-textarea{
+    width:100%;
+    border:1px solid #edc7d4;
+    border-radius:12px;
+    padding:10px 12px;
+    font:inherit;
+    color:#54263b;
+    background:#fff;
+    outline:none;
+}
+.editor-textarea{min-height:100px;resize:vertical;}
+.editor-input:focus,.editor-textarea:focus{
+    border-color:#f56b9b;
+    box-shadow:0 0 0 3px rgba(245,107,155,.12);
+}
+.editor-buttons{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top:12px;
+}
+.editor-btn{
+    border:0;
+    border-radius:12px;
+    padding:10px 13px;
+    cursor:pointer;
+    font-weight:700;
+    background:#f56b9b;
+    color:white;
+}
+.editor-btn.saved{transform:scale(1.02);box-shadow:0 8px 22px rgba(236,72,153,.22);}\n\n.editor-btn.secondary{
+    background:#fff;
+    color:#d94778;
+    border:1px solid #edbfd0;
+}
+.editor-btn.danger{background:#7b2948;}
+.editing [data-editable]{
+    outline:2px dashed rgba(217,71,120,.45);
+    outline-offset:4px;
+    cursor:text;
+}
+.editing [data-editable]:focus{
+    outline:2px solid #d94778;
+    background:rgba(255,255,255,.55);
+}
+.photo-upload-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+}
+.photo-upload-label{
+    display:block;
+    padding:10px;
+    border:1px dashed #e5b7c8;
+    border-radius:12px;
+    background:#fff;
+    cursor:pointer;
+    font-size:12px;
+    color:#75465b;
+}
+.photo-upload-label input{display:none;}
+.photo-preview{
+    width:100%;
+    height:85px;
+    object-fit:cover;
+    border-radius:8px;
+    margin-top:6px;
+    background:#fff4f7;
+}
+.editor-status{
+    font-size:12px;
+    color:#8a6071;
+    margin-top:10px;
+    min-height:18px;
+}
+@media(max-width:600px){
+    .customizer-toggle{
+        left:12px;
+        top:12px;
+        padding:10px 14px;
+        font-size:12px;
+    }
+    .customizer{
+        left:10px;
+        top:58px;
+        width:calc(100vw - 20px);
+        max-height:calc(100vh - 70px);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     EASY CUSTOMIZER
+========================================================= -->
+
+<button class="customizer-toggle" id="customizerToggle" onclick="toggleCustomizer()">
+    ✏️ Customize
+</button>
+
+<aside class="customizer" id="customizer">
+    <h2>Customize Your Website ✨</h2>
+    <p class="help">
+        Turn on <b>Edit Text</b> and click any highlighted text to change it.
+        Upload photos below. Changes are saved in this browser. Use the fields below, then press Save.
+    </p>
+
+    <div class="editor-buttons">
+        <button class="editor-btn" onclick="toggleEditMode()" id="editModeBtn">✏️ Edit Text</button>
+        <button type="button" class="editor-btn secondary" onclick="saveCustomizer()" id="saveCustomizerBtn">💾 Save</button>
+        <button class="editor-btn secondary" onclick="resetCustomizer()">↩ Reset</button>
+    </div>
+
+    <div class="editor-section">
+        <h3>Quick text settings</h3>
+
+        <label class="editor-label">Birthday person's name</label>
+        <input class="editor-input" id="nameInput" placeholder="e.g. Birthday Person's Name">
+
+        <label class="editor-label">Date / special day</label>
+        <input class="editor-input" id="dateInput" placeholder="e.g. September 26 • A special day">
+
+        <label class="editor-label">Opening message</label>
+        <textarea class="editor-textarea" id="introInput" placeholder="Write your own opening message..."></textarea>
+
+        <label class="editor-label">Letter message</label>
+        <textarea class="editor-textarea" id="letterInput" placeholder="Write your own birthday letter..."></textarea>
+
+        <label class="editor-label">Memory message</label>
+        <textarea class="editor-textarea" id="memoryInput" placeholder="Write your own memory message..."></textarea>
+
+        <label class="editor-label">Final message</label>
+        <textarea class="editor-textarea" id="finalInput" placeholder="Write your own final birthday message..."></textarea>
+
+        <div class="editor-buttons">
+            <button class="editor-btn" onclick="applyQuickText()">Apply Text</button>
+        </div>
+    </div>
+
+    <div class="editor-section">
+        <h3>Upload your photos 📸</h3>
+        <p class="help">Choose a few photos (they're compressed automatically). Keep it to 2-4 for best results — too many can be too large for one link.</p>
+        <div class="photo-upload-list" id="photoUploadList"></div>
+    </div>
+
+    <div class="editor-section">
+        <h3>Get your shareable link 🔗</h3>
+        <p class="help">
+            When you're happy with the text and photos above, press this to save your
+            wish and generate a private link you can send on WhatsApp.
+        </p>
+        <div class="editor-buttons">
+            <button type="button" class="editor-btn" onclick="generateShareLink()" id="shareLinkBtn">🔗 Get My Link</button>
+        </div>
+        <input class="editor-input" id="shareLinkOutput" readonly placeholder="Your link will appear here..." style="margin-top:10px;">
+        <div class="editor-buttons">
+            <button type="button" class="editor-btn secondary" onclick="copyShareLink()">📋 Copy Link</button>
+        </div>
+    </div>
+
+    <div class="editor-section">
+        <h3>Important</h3>
+        <p class="help">
+            Text edits and photos here are a live draft in this browser only.
+            Nobody else can see them until you press <b>Get My Link</b> above.
+            The <b>first</b> time you press it, it gives you one private link — the
+            same link stays valid every time after that: pressing the button again
+            just updates what that link shows, it never creates a new link.
+        </p>
+    </div>
+
+    <div class="editor-status" id="editorStatus"></div>
+</aside>
+
+
+<!-- =========================================================
+     MUSIC
+=========================================================
+
+Put your music file beside index.html and name it:
+
+birthday-music.mp3
+
+========================================================= -->
+
+<audio id="music" loop>
+    <source src="/Users/udayraj/Downloads/New1-project/HAPPY BIRTHDAY TO YOU  PIANO INSTRUMENTAL  BEST HAPPY BITHDAY MUSIC 2021.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music" onclick="toggleMusic()" id="musicBtn">
+    🎵
+</button>
+
+
+<div id="app">
+
+
+<!-- =========================================================
+     SCREEN 1 — OPENING
+========================================================= -->
+
+<section class="screen active" id="screen1">
+
+    <div class="bg">
+        <div class="blob one"></div>
+        <div class="blob two"></div>
+        <div class="blob three"></div>
+    </div>
+
+    <div class="content">
+
+        <div class="small" data-editable data-edit-key="openingSmall">A little surprise for someone special</div>
+
+        <div class="script" data-editable data-edit-key="openingScript">For My Love</div>
+
+        <h1 class="title" data-editable data-edit-key="openingTitle">
+            There's a letter<br>
+            waiting for you...
+        </h1>
+
+        <p class="subtitle" data-editable data-edit-key="openingSubtitle">
+            I made this little world just for you.
+            Tap the envelope and let's begin. ❤️
+        </p>
+
+        <div
+            class="envelope-wrap"
+            id="envelope"
+            onclick="openEnvelope()"
+        >
+
+            <div class="envelope">
+
+                <div class="envelope-body"></div>
+
+                <div class="flap"></div>
+
+                <div class="seal">
+                    ❤️
+                </div>
+
+            </div>
+
+        </div>
+
+        <button
+            class="btn"
+            onclick="openEnvelope()"
+        >
+            Open My Letter 💌
+        </button>
+
+        <div class="tap">
+            Tap the envelope
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SCREEN 2 — LETTER
+========================================================= -->
+
+<section class="screen" id="screen2">
+
+    <div class="bg">
+        <div class="blob one"></div>
+        <div class="blob three"></div>
+    </div>
+
+    <div class="content">
+
+        <div class="small" data-editable data-edit-key="date">
+            September 26 • A special day
+        </div>
+
+        <div class="script" data-editable data-edit-key="dear">
+            Dear Birthday Person's Name,
+        </div>
+
+        <div class="letter-card">
+
+            <p data-editable data-edit-key="letter">Today is more than just a date on the calendar.<br><br>It's the day someone incredibly special came into this world.<br><br>Someone whose smile can make an ordinary moment feel beautiful.<br><br>I wanted to create something that would remind you just how loved and special you are.<br><br>So this little surprise is for you...<br><br><strong>Happy Birthday, my love. ❤️</strong></p>
+
+        </div>
+
+        <button
+            class="btn"
+            onclick="showScreen(3)"
+        >
+            Continue ❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SCREEN 3 — CAKE
+========================================================= -->
+
+<section class="screen" id="screen3">
+
+    <div class="bg">
+        <div class="blob two"></div>
+        <div class="blob one"></div>
+    </div>
+
+    <div class="content">
+
+        <div class="small" data-editable data-edit-key="cakeSmall">
+            Make a wish
+        </div>
+
+        <div class="script" data-editable data-edit-key="cakeScript">
+            It's Your Birthday! 🎂
+        </div>
+
+        <h1 class="title" data-editable data-edit-key="cakeTitle">
+            Make a Wish
+        </h1>
+
+        <p class="subtitle" data-editable data-edit-key="cakeSubtitle">
+            Close your eyes, make a beautiful wish,
+            and blow out the candle.
+        </p>
+
+        <div class="cake-area">
+
+            <div class="cake">
+
+                <div class="cake-top"></div>
+
+                <div class="cake-layer"></div>
+
+                <div class="candle">
+
+                    <div
+                        class="flame"
+                        id="flame"
+                    ></div>
+
+                </div>
+
+                <div class="cake-text" data-editable data-edit-key="cakeText">HAPPY<br>BIRTHDAY ❤️</div>
+
+            </div>
+
+        </div>
+
+        <button
+            class="btn"
+            id="blowBtn"
+            onclick="blowCandle()"
+        >
+            Blow the Candle 🕯️
+        </button>
+
+        <p
+            id="wish"
+            style="
+                min-height:30px;
+                color:#d94d7b;
+                font-weight:bold;
+            "
+        ></p>
+
+        <button
+            class="btn"
+            id="cakeNext"
+            style="display:none"
+            onclick="showScreen(4)"
+        >
+            See Our Memories 📸
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SCREEN 4 — MEMORIES
+========================================================= -->
+
+<section class="screen" id="screen4">
+
+    <div class="bg">
+        <div class="blob three"></div>
+        <div class="blob two"></div>
+    </div>
+
+    <div class="content">
+
+        <div class="small" data-editable data-edit-key="memoriesSmall">
+            Little moments
+        </div>
+
+        <div class="script" data-editable data-edit-key="memoriesScript">
+            Our Memories
+        </div>
+
+        <h1 class="title" data-editable data-edit-key="memoriesTitle">
+            Moments Worth<br>
+            Remembering
+        </h1>
+
+        <p class="subtitle" data-editable data-edit-key="memoriesSubtitle">
+            Some moments become memories.
+            Some memories become forever.
+        </p>
+
+        <div class="gallery" id="gallery">
+            <div class="photo" data-photo-slot="0"><img src="photo1.jpg" alt="Our Memory 1"></div>
+            <div class="photo" data-photo-slot="1"><img src="photo2.jpg" alt="Our Memory 2"></div>
+            <div class="photo" data-photo-slot="2"><img src="photo3.jpg" alt="Our Memory 3"></div>
+            <div class="photo" data-photo-slot="3"><img src="photo4.jpg" alt="Our Memory 4"></div>
+            <div class="photo" data-photo-slot="4" style="display:none"><img alt="Our Memory 5"></div>
+            <div class="photo" data-photo-slot="5" style="display:none"><img alt="Our Memory 6"></div>
+            <div class="photo" data-photo-slot="6" style="display:none"><img alt="Our Memory 7"></div>
+            <div class="photo" data-photo-slot="7" style="display:none"><img alt="Our Memory 8"></div>
+        </div>
+
+        <button
+            class="btn"
+            onclick="showScreen(5)"
+        >
+            There's More... ✨
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SCREEN 5 — MEMORY MESSAGE
+========================================================= -->
+
+<section class="screen" id="screen5">
+
+    <div class="bg">
+        <div class="blob one"></div>
+        <div class="blob two"></div>
+    </div>
+
+    <div class="content">
+
+        <div class="small">
+            Something from my heart
+        </div>
+
+        <div class="script">
+            For You ❤️
+        </div>
+
+        <div class="memory">
+
+            <div class="memory-icon">
+                🌷
+            </div>
+
+            <h2>
+                You deserve beautiful things.
+            </h2>
+
+            <p class="subtitle" data-editable data-edit-key="memoryText">More smiles than tears.<br>More beautiful memories than ordinary days.<br>More reasons to be proud of yourself.<br>More moments that make your heart happy.<br><br>And most importantly...<br><br><strong>never forget how special you are.</strong>
+
+                <br>
+
+                More beautiful memories than ordinary days.
+
+                <br>
+
+                More reasons to be proud of yourself.
+
+                <br>
+
+                More moments that make your heart happy.
+
+                <br><br>
+
+                And most importantly...
+
+                <br>
+
+                <strong>
+                    never forget how special you are.
+                </strong>
+
+            </p>
+
+        </div>
+
+        <button
+            class="btn"
+            onclick="showScreen(6)"
+        >
+            I Have 3 Surprises For You 🎁
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SCREEN 6 — SCRATCH CARDS
+========================================================= -->
+
+<section class="screen" id="screen6">
+
+    <div class="bg">
+        <div class="blob two"></div>
+        <div class="blob three"></div>
+    </div>
+
+    <div class="content">
+
+        <div class="small" data-editable data-edit-key="memorySmall">
+            Your surprise
+        </div>
+
+        <div class="script" data-editable data-edit-key="memoryScript">
+            Scratch & Discover
+        </div>
+
+        <h1 class="title" data-editable data-edit-key="memoryTitle">
+            What's Behind<br>
+            The Hearts? 💕
+        </h1>
+
+        <p class="subtitle" data-editable data-edit-key="memorySubtitle">
+            Scratch each card with your finger or mouse.
+        </p>
+
+        <div class="scratch-grid">
+
+            <!-- CARD 1 -->
+
+            <div class="scratch-card">
+
+                <div class="scratch-content">
+
+                    <div class="emoji">
+                        🌹
+                    </div>
+
+                    <h3>
+                        A Little Promise
+                    </h3>
+
+                    <p>
+                        I'll always try to make you smile.
+                    </p>
+
+                </div>
+
+                <canvas
+                    class="scratch"
+                    data-percent="0"
+                ></canvas>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="scratch-card">
+
+                <div class="scratch-content">
+
+                    <div class="emoji">
+                        🍫
+                    </div>
+
+                    <h3>
+                        Sweet Treat
+                    </h3>
+
+                    <p>
+                        Your favorite treat is waiting.
+                    </p>
+
+                </div>
+
+                <canvas
+                    class="scratch"
+                    data-percent="0"
+                ></canvas>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="scratch-card">
+
+                <div class="scratch-content">
+
+                    <div class="emoji">
+                        🤗
+                    </div>
+
+                    <h3>
+                        Unlimited Hugs
+                    </h3>
+
+                    <p>
+                        No expiry date. Ever.
+                    </p>
+
+                </div>
+
+                <canvas
+                    class="scratch"
+                    data-percent="0"
+                ></canvas>
+
+            </div>
+
+        </div>
+
+        <button
+            class="btn"
+            onclick="showScreen(7)"
+        >
+            One Last Surprise ❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SCREEN 7 — FINAL
+========================================================= -->
+
+<section class="screen final" id="screen7">
+
+    <div class="bg">
+        <div class="blob one"></div>
+        <div class="blob two"></div>
+        <div class="blob three"></div>
+    </div>
+
+    <div class="content">
+
+        <div class="big-heart">
+            ❤️
+        </div>
+
+        <div class="small" data-editable data-edit-key="finalSmall">
+            From my heart to yours
+        </div>
+
+        <div class="script" data-editable data-edit-key="finalScript">
+            Happy Birthday
+        </div>
+
+        <h1 class="title" id="finalName" data-editable data-edit-key="name">
+            Birthday Person's Name
+        </h1>
+
+        <div class="final-message">
+
+            <p data-editable data-edit-key="finalText">Today I just want you to know that you are one of the most beautiful parts of my life.<br><br>I hope this year brings you closer to your dreams.<br><br>I hope you laugh more, worry less, experience beautiful things, and create memories you'll never forget.<br><br>And whenever life feels difficult, I hope you remember that there is someone cheering for you.<br><br><strong>Happy Birthday, my love. ❤️</strong><br><br>May your smile always stay this beautiful.</p>
+
+        </div>
+
+        <button
+            class="btn"
+            onclick="celebrate()"
+        >
+            Celebrate 🎉
+        </button>
+
+        <button
+            class="btn"
+            onclick="location.reload()"
+        >
+            Experience Again 💕
+        </button>
+
+    </div>
+
+</section>
+
+</div>
+
+<!-- =========================================================
+     FIREBASE (for shareable links)
+========================================================= -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script>
+    
+const firebaseConfig = {
+    apiKey: "AIzaSyD8_HpIUB0f5sGTk5753F7N68ilCkzOQBo",
+    authDomain: "birthday-wish-90e4c.firebaseapp.com",
+    projectId: "birthday-wish-90e4c",
+    storageBucket: "birthday-wish-90e4c.firebasestorage.app",
+    messagingSenderId: "604861331718",
+    appId: "1:604861331718:web:7747f40cd2adc90ef40687",
+    measurementId: "G-W1ZH0D759W"
+};
+
+let db = null;
+
+try {
+    firebase.initializeApp(firebaseConfig);
+    db = firebase.firestore();
+
+    console.log("Firebase connected successfully!");
+    console.log("Firestore connected successfully!");
+
+} catch (err) {
+    console.warn(
+        "Firebase connection failed. Please check your Firebase configuration.",
+        err
+    );
+}
+</script>
+</script>
+
+<script>
+
+/* =========================================================
+   BASIC SETTINGS
+========================================================= */
+
+/*
+   CHANGE HER NAME HERE
+*/
+
+const herName = "Uday";
+
+
+/* =========================================================
+   SCREEN NAVIGATION
+========================================================= */
+
+let currentScreen = 1;
+
+function showScreen(number){
+
+    document
+        .querySelectorAll(".screen")
+        .forEach(screen=>{
+            screen.classList.remove("active");
+        });
+
+    const target =
+        document.getElementById(
+            "screen"+number
+        );
+
+    if(target){
+
+        target.classList.add("active");
+
+        currentScreen = number;
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+        if(number === 7){
+            setTimeout(()=>{
+                celebrate();
+            },500);
+        }
+
+    }
+
+}
+
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+let envelopeOpened = false;
+
+function openEnvelope(){
+
+    if(envelopeOpened) return;
+
+    envelopeOpened = true;
+
+    const envelope =
+        document.getElementById("envelope");
+
+    envelope.classList.add("open");
+
+    createHearts(15);
+
+    setTimeout(()=>{
+
+        showScreen(2);
+
+    },1200);
+
+}
+
+
+/* =========================================================
+   CAKE
+========================================================= */
+
+let candleBlown = false;
+
+function blowCandle(){
+
+    if(candleBlown) return;
+
+    candleBlown = true;
+
+    const flame =
+        document.getElementById("flame");
+
+    flame.classList.add("off");
+
+    document.getElementById("blowBtn").style.display =
+        "none";
+
+    document.getElementById("wish").innerHTML =
+        "✨ Your wish has been made... May it come true. ❤️";
+
+    document.getElementById("cakeNext").style.display =
+        "inline-block";
+
+    createConfetti(70);
+
+}
+
+
+/* =========================================================
+   MUSIC
+========================================================= */
+
+const music = document.getElementById("music");
+let musicPlaying = false;
+
+function toggleMusic(){
+
+    if(!musicPlaying){
+
+        music.play()
+        .then(() => {
+
+            musicPlaying = true;
+
+            document.getElementById("musicBtn").textContent = "🔊";
+
+        })
+        .catch(error => {
+
+            console.error("Music error:", error);
+
+            setStatus("⚠️ Music could not play. Check birthday-music.mp3");
+
+        });
+
+    }else{
+
+        music.pause();
+
+        musicPlaying = false;
+
+        document.getElementById("musicBtn").textContent = "🎵";
+
+    }
+}
+
+
+/* =========================================================
+   SCRATCH CARD SYSTEM
+========================================================= */
+
+function setupScratchCards(){
+
+    const cards =
+        document.querySelectorAll(".scratch");
+
+    cards.forEach(canvas=>{
+
+        const parent =
+            canvas.parentElement;
+
+        const width =
+            parent.clientWidth;
+
+        const height =
+            parent.clientHeight;
+
+        canvas.width = width;
+        canvas.height = height;
+
+        const ctx =
+            canvas.getContext("2d");
+
+        /*
+           Scratch-cover design
+        */
+
+        const gradient =
+            ctx.createLinearGradient(
+                0,
+                0,
+                width,
+                height
+            );
+
+        gradient.addColorStop(
+            0,
+            "#f28aad"
+        );
+
+        gradient.addColorStop(
+            .5,
+            "#d94e7c"
+        );
+
+        gradient.addColorStop(
+            1,
+            "#ef789d"
+        );
+
+        ctx.fillStyle = gradient;
+
+        ctx.fillRect(
+            0,
+            0,
+            width,
+            height
+        );
+
+
+        /*
+           Decorative pattern
+        */
+
+        ctx.fillStyle =
+            "rgba(255,255,255,.18)";
+
+        for(let i=0;i<20;i++){
+
+            ctx.beginPath();
+
+            ctx.arc(
+                Math.random()*width,
+                Math.random()*height,
+                15,
+                0,
+                Math.PI*2
+            );
+
+            ctx.fill();
+
+        }
+
+
+        /*
+           Center text
+        */
+
+        ctx.fillStyle = "white";
+
+        ctx.font =
+            "bold 20px Segoe UI";
+
+        ctx.textAlign = "center";
+
+        ctx.fillText(
+            "SCRATCH ME ✨",
+            width/2,
+            height/2
+        );
+
+
+        let scratching = false;
+
+
+        function scratch(e){
+
+            if(!scratching) return;
+
+            const rect =
+                canvas.getBoundingClientRect();
+
+            let x;
+            let y;
+
+            if(e.touches){
+
+                x =
+                    e.touches[0].clientX -
+                    rect.left;
+
+                y =
+                    e.touches[0].clientY -
+                    rect.top;
+
+            }else{
+
+                x =
+                    e.clientX -
+                    rect.left;
+
+                y =
+                    e.clientY -
+                    rect.top;
+
+            }
+
+            /*
+               Make scratch area bigger
+            */
+
+            ctx.globalCompositeOperation =
+                "destination-out";
+
+            ctx.beginPath();
+
+            ctx.arc(
+                x,
+                y,
+                24,
+                0,
+                Math.PI*2
+            );
+
+            ctx.fill();
+
+            checkScratch(canvas);
+
+        }
+
+
+        canvas.addEventListener(
+            "mousedown",
+            ()=>{
+                scratching=true;
+            }
+        );
+
+        canvas.addEventListener(
+            "mouseup",
+            ()=>{
+                scratching=false;
+            }
+        );
+
+        canvas.addEventListener(
+            "mouseleave",
+            ()=>{
+                scratching=false;
+            }
+        );
+
+        canvas.addEventListener(
+            "mousemove",
+            scratch
+        );
+
+
+        canvas.addEventListener(
+            "touchstart",
+            e=>{
+                scratching=true;
+                e.preventDefault();
+            },
+            {passive:false}
+        );
+
+
+        canvas.addEventListener(
+            "touchend",
+            ()=>{
+                scratching=false;
+            }
+        );
+
+
+        canvas.addEventListener(
+            "touchmove",
+            e=>{
+                scratch(e);
+                e.preventDefault();
+            },
+            {passive:false}
+        );
+
+    });
+
+}
+
+
+/* =========================================================
+   CHECK SCRATCH PERCENTAGE
+========================================================= */
+
+function checkScratch(canvas){
+
+    const ctx =
+        canvas.getContext("2d");
+
+    const pixels =
+        ctx.getImageData(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        ).data;
+
+    let transparent = 0;
+
+    /*
+       Check every 16th pixel
+       for performance on mobile.
+    */
+
+    for(
+        let i=3;
+        i<pixels.length;
+        i+=64
+    ){
+
+        if(pixels[i] < 50){
+            transparent++;
+        }
+
+    }
+
+    const total =
+        pixels.length / 64;
+
+    const percentage =
+        transparent / total;
+
+    /*
+       Reveal after approximately 45%
+       is scratched.
+    */
+
+    if(percentage > .45){
+
+        canvas.style.opacity = "0";
+
+        canvas.style.pointerEvents =
+            "none";
+
+        createConfetti(20);
+
+    }
+
+}
+
+
+/* =========================================================
+   CONFETTI
+========================================================= */
+
+function createConfetti(amount){
+
+    const symbols = [
+        "❤️",
+        "💕",
+        "✨",
+        "🌸",
+        "🎉",
+        "💖",
+        "⭐",
+        "🎀"
+    ];
+
+    for(let i=0;i<amount;i++){
+
+        const item =
+            document.createElement("div");
+
+        item.style.position =
+            "fixed";
+
+        item.style.left =
+            Math.random()*100+"vw";
+
+        item.style.top =
+            "-30px";
+
+        item.style.zIndex =
+            "999";
+
+        item.style.pointerEvents =
+            "none";
+
+        item.style.fontSize =
+            (12+Math.random()*18)+"px";
+
+        item.textContent =
+            symbols[
+                Math.floor(
+                    Math.random()*symbols.length
+                )
+            ];
+
+        document.body.appendChild(item);
+
+        const duration =
+            2500+
+            Math.random()*3000;
+
+        item.animate(
+            [
+                {
+                    transform:"translateY(0) rotate(0deg)",
+                    opacity:1
+                },
+
+                {
+                    transform:
+                        `translateY(110vh)
+                         rotate(${Math.random()*1000}deg)`,
+                    opacity:.2
+                }
+            ],
+            {
+                duration:duration,
+                easing:"linear"
+            }
+        );
+
+        setTimeout(()=>{
+            item.remove();
+        },duration+100);
+
+    }
+
+}
+
+
+/* =========================================================
+   HEARTS
+========================================================= */
+
+function createHearts(amount){
+
+    for(let i=0;i<amount;i++){
+
+        const heart =
+            document.createElement("div");
+
+        heart.textContent = "❤️";
+
+        heart.style.position =
+            "fixed";
+
+        heart.style.left =
+            Math.random()*100+"vw";
+
+        heart.style.bottom =
+            "-30px";
+
+        heart.style.fontSize =
+            (15+Math.random()*25)+"px";
+
+        heart.style.zIndex =
+            "999";
+
+        heart.style.pointerEvents =
+            "none";
+
+        document.body.appendChild(heart);
+
+        const animation =
+            heart.animate(
+                [
+                    {
+                        transform:"translateY(0) scale(.5)",
+                        opacity:0
+                    },
+
+                    {
+                        transform:"translateY(-40vh) scale(1)",
+                        opacity:1
+                    },
+
+                    {
+                        transform:
+                            `translateY(-110vh)
+                             translateX(${Math.random()*150-75}px)
+                             scale(.8)`,
+                        opacity:0
+                    }
+                ],
+                {
+                    duration:
+                        3000+
+                        Math.random()*2000,
+                    easing:"ease-out"
+                }
+            );
+
+        animation.onfinish =
+            ()=>{
+                heart.remove();
+            };
+
+    }
+
+}
+
+
+/* =========================================================
+   FIREWORKS
+========================================================= */
+
+function fireworks(){
+
+    const centerX =
+        Math.random()*window.innerWidth;
+
+    const centerY =
+        100+
+        Math.random()*
+        (window.innerHeight*.5);
+
+    for(let i=0;i<35;i++){
+
+        const particle =
+            document.createElement("div");
+
+        particle.className =
+            "firework";
+
+        particle.style.left =
+            centerX+"px";
+
+        particle.style.top =
+            centerY+"px";
+
+        const angle =
+            Math.random()*
+            Math.PI*
+            2;
+
+        const distance =
+            80+
+            Math.random()*180;
+
+        particle.style.setProperty(
+            "--x",
+            Math.cos(angle)*
+            distance+
+            "px"
+        );
+
+        particle.style.setProperty(
+            "--y",
+            Math.sin(angle)*
+            distance+
+            "px"
+        );
+
+        document.body.appendChild(
+            particle
+        );
+
+        setTimeout(()=>{
+            particle.remove();
+        },1600);
+
+    }
+
+}
+
+
+/* =========================================================
+   FINAL CELEBRATION
+========================================================= */
+
+function celebrate(){
+
+    createConfetti(120);
+
+    createHearts(40);
+
+    for(let i=0;i<8;i++){
+
+        setTimeout(()=>{
+            fireworks();
+        },i*500);
+
+    }
+
+}
+
+
+/* =========================================================
+   FLOATING FLOWERS
+========================================================= */
+
+function createFlowers(){
+
+    const flowers = [
+        "🌸",
+        "🌷",
+        "🌹",
+        "💕",
+        "✨"
+    ];
+
+    for(let i=0;i<25;i++){
+
+        const flower =
+            document.createElement("div");
+
+        flower.className =
+            "flower";
+
+        flower.textContent =
+            flowers[
+                Math.floor(
+                    Math.random()*flowers.length
+                )
+            ];
+
+        flower.style.left =
+            Math.random()*100+"vw";
+
+        flower.style.animationDuration =
+            (8+Math.random()*12)+"s";
+
+        flower.style.animationDelay =
+            (-Math.random()*15)+"s";
+
+        flower.style.fontSize =
+            (15+Math.random()*18)+"px";
+
+        document.body.appendChild(
+            flower
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   INITIALIZE
+========================================================= */
+
+window.addEventListener(
+    "load",
+    ()=>{
+        setupScratchCards();
+        createFlowers();
+    }
+);
+
+
+/* =========================================================
+   RESIZE SCRATCH CARDS
+========================================================= */
+
+window.addEventListener(
+    "resize",
+    ()=>{
+        /*
+           Cards keep their current state.
+           No redraw is performed here to avoid
+           clearing the scratch progress.
+        */
+    }
+);
+
+
+/* =========================================================
+   EASY CUSTOMIZER
+========================================================= */
+
+const CUSTOMIZER_KEY = "birthdayWebsiteCustomizerV2";
+let editMode = false;
+
+const defaultEditableValues = {};
+document.querySelectorAll("[data-editable]").forEach(el=>{
+    defaultEditableValues[el.dataset.editKey] = el.innerHTML;
+});
+
+function toggleCustomizer(){
+    document.getElementById("customizer").classList.toggle("open");
+    syncEditorInputs();
+}
+
+function toggleEditMode(){
+    editMode = !editMode;
+    document.body.classList.toggle("editing", editMode);
+
+    document.querySelectorAll("[data-editable]").forEach(el=>{
+        el.contentEditable = editMode ? "true" : "false";
+        el.spellcheck = true;
+    });
+
+    document.getElementById("editModeBtn").textContent =
+        editMode ? "✅ Editing On" : "✏️ Edit Text";
+
+    if(editMode){
+        setStatus("Click any outlined text and type your own words.");
+    }else{
+        saveCustomizer();
+    }
+}
+
+function applyQuickText(shouldSave = true){
+    const nameEl = document.getElementById("nameInput");
+    const dateEl = document.getElementById("dateInput");
+    const introEl = document.getElementById("introInput");
+    const letterEl = document.getElementById("letterInput");
+    const memoryEl = document.getElementById("memoryInput");
+    const finalEl = document.getElementById("finalInput");
+
+    const name = nameEl ? nameEl.value.trim() : "";
+    const date = dateEl ? dateEl.value.trim() : "";
+    const intro = introEl ? introEl.value.trim() : "";
+    const letter = letterEl ? letterEl.value.trim() : "";
+    const memory = memoryEl ? memoryEl.value.trim() : "";
+    const finalText = finalEl ? finalEl.value.trim() : "";
+
+    if(name){
+        // Update the actual visible birthday person's name.
+        setEditable("name", escapeHtml(name));
+
+        // Update the greeting.
+        setEditable("dear", "Dear " + escapeHtml(name) + ",");
+
+        // Also update the browser tab title.
+        document.title = "Happy Birthday " + name + " ❤️";
+    }
+
+    if(date) setEditable("date", escapeHtml(date));
+    if(intro) setEditable("openingSubtitle", nl2br(intro));
+    if(letter) setEditable("letter", nl2br(letter));
+    if(memory) setEditable("memoryText", nl2br(memory));
+    if(finalText) setEditable("finalText", nl2br(finalText));
+
+    if(shouldSave){
+        saveCustomizer();
+    }else{
+        setStatus("Text ready to save.");
+    }
+}
+
+function setEditable(key, htmlValue){
+    const el = document.querySelector('[data-edit-key="'+key+'"]');
+    if(el) el.innerHTML = htmlValue;
+}
+
+function nl2br(text){
+    return escapeHtml(text).replace(/\n/g,"<br>");
+}
+
+function escapeHtml(text){
+    const div = document.createElement("div");
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+function syncEditorInputs(){
+    const getText = key=>{
+        const el = document.querySelector('[data-edit-key="'+key+'"]');
+        return el ? el.innerText.replace(/\n{3,}/g,"\n\n").trim() : "";
+    };
+
+    document.getElementById("nameInput").value = getText("name") || herName;
+    document.getElementById("dateInput").value = getText("date");
+    document.getElementById("introInput").value = getText("openingSubtitle");
+    document.getElementById("letterInput").value = getText("letter");
+    document.getElementById("memoryInput").value = getText("memoryText");
+    document.getElementById("finalInput").value = getText("finalText");
+}
+
+function saveCustomizer(){
+    /*
+      Save text separately from photos.
+      This prevents a large photo from making the entire save operation fail.
+      Also apply the Quick Text fields first, so pressing Save really saves
+      what the visitor has typed into the editor.
+    */
+
+    try{
+        applyQuickText(false);
+    }catch(err){
+        console.warn("Quick text could not be applied before saving.", err);
+    }
+
+    try{
+        const nameElement = document.querySelector('[data-edit-key="name"]');
+        const savedName = nameElement ? nameElement.innerText.trim() : "";
+        if(savedName){
+            document.title = "Happy Birthday " + savedName + " ❤️";
+        }
+    }catch(err){}
+
+    const text = {};
+    document.querySelectorAll("[data-editable]").forEach(el=>{
+        text[el.dataset.editKey] = el.innerHTML;
+    });
+
+    let textSaved = false;
+    try{
+        localStorage.setItem(CUSTOMIZER_KEY + ":text", JSON.stringify(text));
+        textSaved = true;
+    }catch(err){
+        console.warn("Text could not be saved to localStorage.", err);
+    }
+
+    let photoCount = 0;
+    let photoErrors = 0;
+
+    for(let i=0;i<8;i++){
+        const img = document.querySelector('[data-photo-slot="'+i+'"] img');
+        if(!img) continue;
+
+        const src = img.getAttribute("src") || "";
+
+        // Only store uploaded data URLs. Default photo1.jpg paths do not
+        // need to be stored because they already exist in the website.
+        if(src.startsWith("data:image/")){
+            try{
+                localStorage.setItem(CUSTOMIZER_KEY + ":photo:" + i, src);
+                photoCount++;
+            }catch(err){
+                photoErrors++;
+                console.warn("Photo " + (i+1) + " could not be saved.", err);
+            }
+        }else{
+            // Remove an old uploaded photo from storage if the slot is back
+            // to its original image.
+            try{
+                localStorage.removeItem(CUSTOMIZER_KEY + ":photo:" + i);
+            }catch(err){}
+        }
+    }
+
+    // Keep a small compatibility record for older versions.
+    try{
+        localStorage.setItem(CUSTOMIZER_KEY + ":savedAt", new Date().toISOString());
+    }catch(err){}
+
+    const btn = document.getElementById("saveCustomizerBtn");
+
+    if(textSaved){
+        if(photoErrors > 0){
+            setStatus("⚠️ Text saved. " + photoErrors + " photo(s) were too large to save.");
+        }else{
+            setStatus("✅ Saved successfully in this browser.");
+        }
+
+        if(btn){
+            const oldText = btn.textContent;
+            btn.textContent = "✅ Saved";
+            btn.classList.add("saved");
+            clearTimeout(window.__saveButtonTimer);
+            window.__saveButtonTimer = setTimeout(()=>{
+                btn.textContent = oldText;
+                btn.classList.remove("saved");
+            },1800);
+        }
+    }else{
+        setStatus("❌ Save failed. Your browser blocked local storage.");
+    }
+}
+
+function loadCustomizer(){
+    try{
+        // New format: text is stored separately.
+        let textRaw = localStorage.getItem(CUSTOMIZER_KEY + ":text");
+
+        // Backward compatibility with the previous version.
+        if(!textRaw){
+            const legacyRaw = localStorage.getItem(CUSTOMIZER_KEY);
+            if(legacyRaw){
+                const legacy = JSON.parse(legacyRaw);
+                if(legacy.text){
+                    textRaw = JSON.stringify(legacy.text);
+                }
+            }
+        }
+
+        if(textRaw){
+            const text = JSON.parse(textRaw);
+            Object.entries(text).forEach(([key,value])=>{
+                setEditable(key,value);
+            });
+
+            const savedName = document.querySelector('[data-edit-key="name"]');
+            if(savedName && savedName.innerText.trim()){
+                document.title = "Happy Birthday " + savedName.innerText.trim() + " ❤️";
+            }
+        }
+
+        // Load uploaded photos.
+        for(let i=0;i<8;i++){
+            const src = localStorage.getItem(CUSTOMIZER_KEY + ":photo:" + i);
+            if(src) setPhoto(i,src);
+        }
+    }catch(err){
+        console.warn("Could not load saved customization.",err);
+        setStatus("⚠️ Could not load saved changes.");
+    }
+}
+
+function resetCustomizer(){
+    if(!confirm("Reset all custom text and photos to the original template?")) return;
+
+    try{
+        localStorage.removeItem(CUSTOMIZER_KEY);
+        localStorage.removeItem(CUSTOMIZER_KEY + ":text");
+        localStorage.removeItem(CUSTOMIZER_KEY + ":savedAt");
+
+        for(let i=0;i<8;i++){
+            localStorage.removeItem(CUSTOMIZER_KEY + ":photo:" + i);
+        }
+    }catch(err){}
+
+    Object.entries(defaultEditableValues).forEach(([key,value])=>{
+        setEditable(key,value);
+    });
+
+    document.title = "Happy Birthday My Love ❤️";
+
+    // Restore original 4 image paths and hide slots 5-8.
+    const defaults = ["photo1.jpg","photo2.jpg","photo3.jpg","photo4.jpg"];
+    for(let i=0;i<8;i++){
+        const slot = document.querySelector('[data-photo-slot="'+i+'"]');
+        const img = slot ? slot.querySelector("img") : null;
+        if(!slot || !img) continue;
+
+        if(i < 4){
+            img.src = defaults[i];
+            img.alt = "Our Memory " + (i+1);
+            slot.style.display = "";
+        }else{
+            img.removeAttribute("src");
+            slot.style.display = "none";
+        }
+    }
+
+    syncEditorInputs();
+    buildPhotoUploaders();
+    setStatus("↩ Reset complete.");
+}
+
+function setPhoto(index,src){
+    const slot = document.querySelector('[data-photo-slot="'+index+'"]');
+    if(!slot) return;
+
+    const img = slot.querySelector("img");
+    if(!img) return;
+
+    img.src = src;
+    img.alt = "Our Memory " + (index+1);
+    slot.style.display = "";
+}
+
+function buildPhotoUploaders(){
+    const box = document.getElementById("photoUploadList");
+    box.innerHTML = "";
+
+    for(let i=0;i<8;i++){
+        const wrapper = document.createElement("label");
+        wrapper.className = "photo-upload-label";
+
+        const img = document.querySelector('[data-photo-slot="'+i+'"] img');
+        const currentSrc = img && img.src && !img.src.endsWith("/") ? img.src : "";
+
+        wrapper.innerHTML =
+            "Photo " + (i+1) +
+            '<input type="file" accept="image/*" data-photo-input="'+i+'">' +
+            '<img class="photo-preview" alt="Preview ' + (i+1) + '">';
+
+        const preview = wrapper.querySelector(".photo-preview");
+        if(currentSrc) preview.src = currentSrc;
+
+        const input = wrapper.querySelector("input");
+        input.addEventListener("change",e=>{
+            const file = e.target.files[0];
+            if(!file) return;
+
+            if(!file.type.startsWith("image/")){
+                setStatus("Please choose an image file.");
+                return;
+            }
+
+            // Resize before storing so the page stays lightweight.
+            compressImage(file, 900, .65)
+                .then(dataUrl=>{
+                    setPhoto(i,dataUrl);
+                    preview.src = dataUrl;
+                    saveCustomizer();
+                    setStatus("Photo " + (i+1) + " uploaded.");
+                })
+                .catch(()=>{
+                    setStatus("Could not process that image.");
+                });
+        });
+
+        box.appendChild(wrapper);
+    }
+}
+
+function compressImage(file,maxSize,quality){
+    return new Promise((resolve,reject)=>{
+        const reader = new FileReader();
+
+        reader.onload = e=>{
+            const img = new Image();
+
+            img.onload = ()=>{
+                let w = img.width;
+                let h = img.height;
+
+                if(Math.max(w,h) > maxSize){
+                    const scale = maxSize / Math.max(w,h);
+                    w = Math.round(w*scale);
+                    h = Math.round(h*scale);
+                }
+
+                const canvas = document.createElement("canvas");
+                canvas.width = w;
+                canvas.height = h;
+
+                const ctx = canvas.getContext("2d");
+                ctx.drawImage(img,0,0,w,h);
+
+                resolve(canvas.toDataURL("image/jpeg",quality));
+            };
+
+            img.onerror = reject;
+            img.src = e.target.result;
+        };
+
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+    });
+}
+
+function setStatus(message){
+    const status = document.getElementById("editorStatus");
+    if(status) status.textContent = message;
+}
+
+/* =========================================================
+   SHAREABLE LINKS (Firestore)
+========================================================= */
+
+function collectWishData(){
+    try{ applyQuickText(false); }catch(err){}
+
+    const text = {};
+    document.querySelectorAll("[data-editable]").forEach(el=>{
+        text[el.dataset.editKey] = el.innerHTML;
+    });
+
+    const photos = {};
+    for(let i=0;i<8;i++){
+        const img = document.querySelector('[data-photo-slot="'+i+'"] img');
+        const src = img ? img.getAttribute("src") || "" : "";
+        if(src.startsWith("data:image/")) photos[i] = src;
+    }
+
+    return { text, photos, createdAt: new Date().toISOString() };
+}
+
+async function generateShareLink(){
+    const btn = document.getElementById("shareLinkBtn");
+    const output = document.getElementById("shareLinkOutput");
+
+    if(!db){
+        setStatus("⚠️ Shareable links aren't set up yet — add your Firebase config (see README.md).");
+        return;
+    }
+
+    const data = collectWishData();
+
+    const approxBytes = new Blob([JSON.stringify(data)]).size;
+    if(approxBytes > 900000){
+        setStatus("⚠️ Too many/large photos for one link. Please remove a photo or two and try again.");
+        return;
+    }
+
+    if(btn){ btn.disabled = true; btn.textContent = "Saving..."; }
+
+    try{
+        const existingId = localStorage.getItem("myWishLinkId");
+
+        if(existingId){
+            // Reuse the same document/link — this keeps updating the one
+            // private link you already sent, instead of creating a new one.
+            await db.collection("wishes").doc(existingId).set(data);
+            const url = location.origin + location.pathname + "?wish=" + existingId;
+            output.value = url;
+            setStatus("✅ Updated! Your existing link now shows the latest version.");
+        }else{
+            const docRef = await db.collection("wishes").add(data);
+            localStorage.setItem("myWishLinkId", docRef.id);
+            const url = location.origin + location.pathname + "?wish=" + docRef.id;
+            output.value = url;
+            setStatus("✅ Link created! Copy it and share it privately — reusing this button won't change the link.");
+        }
+    }catch(err){
+        console.error(err);
+        setStatus("❌ Could not save your wish. Check your Firebase setup / internet connection.");
+    }finally{
+        if(btn){ btn.disabled = false; btn.textContent = "🔗 Get My Link"; }
+    }
+}
+
+function copyShareLink(){
+
+    const output = document.getElementById("shareLinkOutput");
+
+    if(!output || !output.value){
+        setStatus("⚠️ First press Get My Link.");
+        return;
+    }
+
+    const link = output.value;
+
+    // Try modern clipboard
+    if (navigator.clipboard) {
+
+        navigator.clipboard.writeText(link)
+        .then(function(){
+            setStatus("✅ Link copied successfully! 📋");
+        })
+        .catch(function(){
+            manualCopy(link);
+        });
+
+    } else {
+        manualCopy(link);
+    }
+}
+
+
+function manualCopy(link){
+
+    const textarea = document.createElement("textarea");
+
+    textarea.value = link;
+
+    textarea.style.position = "fixed";
+    textarea.style.left = "-9999px";
+    textarea.style.top = "0";
+
+    document.body.appendChild(textarea);
+
+    textarea.focus();
+    textarea.select();
+
+    try {
+
+        document.execCommand("copy");
+
+        setStatus("✅ Link copied successfully! 📋");
+
+    } catch(error) {
+
+        setStatus("📋 Link selected — press ⌘ + C to copy.");
+
+        textarea.select();
+
+    }
+
+    document.body.removeChild(textarea);
+}
+
+
+function fallbackCopyLink(link){
+
+    const temp = document.createElement("textarea");
+
+    temp.value = link;
+
+    temp.style.position = "fixed";
+    temp.style.left = "-9999px";
+    temp.style.top = "0";
+
+    document.body.appendChild(temp);
+
+    temp.focus();
+    temp.select();
+
+    try{
+
+        const successful =
+            document.execCommand("copy");
+
+        if(successful){
+
+            setStatus("✅ Link copied successfully! 📋");
+
+        }else{
+
+            showManualCopy(link);
+
+        }
+
+    }catch(error){
+
+        showManualCopy(link);
+
+    }
+
+    document.body.removeChild(temp);
+}
+
+
+function showManualCopy(link){
+
+    const output =
+        document.getElementById("shareLinkOutput");
+
+    output.focus();
+    output.select();
+
+    setStatus(
+        "📋 Link selected. Press ⌘ + C to copy."
+    );
+}
+
+async function loadSharedWish(wishId){
+    enterViewOnlyMode();
+
+    if(!db){
+        setStatus("⚠️ This link can't load — the site owner hasn't finished Firebase setup yet.");
+        return;
+    }
+
+    try{
+        const doc = await db.collection("wishes").doc(wishId).get();
+        if(!doc.exists){
+            document.body.innerHTML =
+                '<div style="display:flex;align-items:center;justify-content:center;min-height:100vh;'
+                +'text-align:center;padding:20px;font-family:sans-serif;color:#54263b;">'
+                +'This birthday link could not be found. It may have been removed.</div>';
+            return;
+        }
+
+        const data = doc.data();
+
+        if(data.text){
+            Object.entries(data.text).forEach(([key,value])=>{
+                setEditable(key,value);
+            });
+            const savedName = document.querySelector('[data-edit-key="name"]');
+            if(savedName && savedName.innerText.trim()){
+                document.title = "Happy Birthday " + savedName.innerText.trim() + " ❤️";
+            }
+        }
+
+        if(data.photos){
+            Object.entries(data.photos).forEach(([index,src])=>{
+                setPhoto(parseInt(index,10), src);
+            });
+        }
+    }catch(err){
+        console.error(err);
+        setStatus("⚠️ Could not load this wish. Check your internet connection.");
+    }
+}
+
+function enterViewOnlyMode(){
+    // Recipients just see the wish itself — no editor UI, no edit affordances.
+    const toggle = document.getElementById("customizerToggle");
+    const panel = document.getElementById("customizer");
+    if(toggle) toggle.style.display = "none";
+    if(panel) panel.classList.remove("open");
+    if(panel) panel.style.display = "none";
+
+    document.querySelectorAll("[data-editable]").forEach(el=>{
+        el.contentEditable = "false";
+    });
+}
+
+// Save direct edits automatically.
+document.addEventListener("input",e=>{
+    if(e.target.matches("[data-editable]") && editMode){
+        clearTimeout(window.__birthdaySaveTimer);
+        window.__birthdaySaveTimer = setTimeout(saveCustomizer,700);
+    }
+});
+
+window.addEventListener("load",()=>{
+    const params = new URLSearchParams(location.search);
+    const wishId = params.get("wish");
+
+    if(wishId){
+        // Someone opened a shared link — show their wish, read-only.
+        loadSharedWish(wishId);
+    }else{
+        // The creator is drafting their own wish in this browser.
+        loadCustomizer();
+        syncEditorInputs();
+        buildPhotoUploaders();
+    }
+});
+
+</script>
+
+</body>
+</html>
